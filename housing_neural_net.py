@@ -374,8 +374,6 @@ def get_prediction(dnn_regressor, validation_examples, validation_targets):
     validation_predictions = np.array(
         [item['predictions'][0] for item in validation_predictions])
 
-    print(str(validation_predictions.size))
-
     # Compute validation loss.
     validation_rmse = math.sqrt(
         metrics.mean_squared_error(validation_predictions, validation_targets))
